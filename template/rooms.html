@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'room.css' %}">
+	<meta charset="utf-8">
+	<title>Room book</title>
+	<link rel="shortcut icon" href="{% static 'media/ffav.png' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="cont">
+	{% for i in r %}
+	<div class="container">
+		<img src="{% static 'room.jpg' %}" class="container-image">
+		<div class="container-tt" >Oda Numarası :{{i}}</div>
+		<a href="/book/{{i}}/{{in_d}}/{{out_d}}/booked"><button class="container-btn">Tut</button></a>			
+		<br>
+	</div>
+	{% endfor %}
+</div>
+
+</body>
+</html>
